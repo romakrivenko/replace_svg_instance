@@ -1,0 +1,12 @@
+{
+  "name": "Replace SVG",
+  "id": "1209466706009003898",
+  "api": "1.0.0",
+  "main": "code.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": [
+    "figma"
+  ],
+  "ui": "ui.html"
+}
