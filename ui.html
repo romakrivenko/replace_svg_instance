@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Choose a vector graphic</title>
+    <title>SVG Replacer</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      input[type="number"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:disabled {
+        background-color: gray;
+        cursor: default;
+      }
+    </style>
   </head>
   <body>
-    <input type="file" id="fileInput" />
-    <script>
-      const fileInput = document.getElementById("fileInput");
+    <h1>SVG Replacer</h1>
+    <label>
+      Choose SVG file:
+      <input type="file" id="file-input">
+    </label>
+    <label>
+      or paste SVG code:
+      <textarea id="code-input" rows="10"></textarea>
+    </label>
+    <label>
+      Width:
+      <input type="number" id="width-input">
+    </label>
+    <label>
+      Height:
+      <input type="number" id="height-input">
+    </label>
+    <label>
+      Proportional resize:
+      <input type="checkbox" id="proportional-input">
+    </label>
+    <button id="replace-button" disabled>Replace</button>
 
-      fileInput.addEventListener("change", () => {
-        const file = fileInput.files[0];</script>
+    <script src="index.js"></script>
+  </body>
+</html>
